@@ -11,7 +11,7 @@ object ImplementationHive {
 
   def testHiveConnection()=
   {
-    val implementationHive=new HiveJDBCConnection("jdbc:hive2://localhost:10000/default","hduser","")
+    val implementationHive=new HiveJDBCConnection("jdbc:hive2://10.1.51.127:10000/default","hive","hive")
     implementationHive.init()
 
     var query="create table if not exists semaine(id int,name string)"
